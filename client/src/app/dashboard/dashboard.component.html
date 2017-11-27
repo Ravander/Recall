@@ -1,0 +1,27 @@
+<div class="w3-container w3-dark-grey w3-text-light-blue">
+
+  <h1 class="w3-center w3-border-bottom w3-border-light-blue">{{ car.nickname }}</h1>
+
+  <div class="w3-container w3-content w3-large">
+
+    <div class="w3-text-white">
+      <p>{{ car.license }}</p>
+      <p>{{ car.model }}</p>
+      <p>{{ car.year }}</p>
+    </div>
+
+    <div class="w3-text-light-blue w3-right-align w3-large">
+      <p><b><i>Last Action:</i></b></p>
+      <p>{{ car.lastAction }}</p>
+      <p><b><i>Car Maintenance:</i></b></p>
+      <p>{{ car.sumCost }} €</p>
+    </div>
+
+  </div>
+
+  <a class="w3-button w3-center w3-xlarge w3-block w3-hover-light-blue w3-hover-text-dark-grey w3-round-large">
+    <i class="fa fa-plus"></i>
+    Add Action
+  </a>
+
+</div>

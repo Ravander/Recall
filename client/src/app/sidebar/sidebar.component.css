@@ -1,0 +1,13 @@
+.w3-sidebar a {
+  background-color: rgb(81, 210, 222) !important;
+  color: rgb(51, 51, 51) !important;
+}
+
+.w3-sidebar a > i {
+  display: block;
+}
+
+.w3-sidebar a:hover {
+  background-color: rgb(73, 189, 200) !important;
+  color: rgb(51, 51, 51) !important;
+}
