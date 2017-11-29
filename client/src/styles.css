@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+html, body, h1, h2, h3, h4, h5, h6, a {
+  font-family: 'Roboto', Verdana, Sans-serif !important;
+  font-weight: lighter !important;
+}
+
+body  {
+  height: 100vh;
+  background-image: url("assets/img/chevrolet-cruze.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /* w3.css Recall Colors */
 
 .w3-dark-grey {
