@@ -14,7 +14,7 @@ export class TopbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleMenu = function() {
+  toggleMenu(): void {
     this.isMenu = !this.isMenu;
   }
 

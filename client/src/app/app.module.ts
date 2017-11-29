@@ -4,18 +4,18 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AboutComponent } from './about/about.component';
+
+import { VehicleService } from "./vehicle.service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
-    HomeComponent,
     DashboardComponent,
     SidebarComponent,
     SettingsComponent,
@@ -25,7 +25,7 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [VehicleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

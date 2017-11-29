@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Car } from "../car";
+import { VehicleService } from "../vehicle.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -8,18 +10,12 @@ import { Car } from "../car";
 })
 export class DashboardComponent implements OnInit {
 
-  car: Car = {
-    license: "ABC-123",
-    nickname: "Chev 123",
-    model: "Chevrolet, Cruze LT",
-    year: 2017,
-    lastAction: "21.8.2017",
-    sumCost: 650
-  };
+  car: Car;
 
-  constructor() { }
+  constructor(private vehicleService: VehicleService) { }
 
   ngOnInit() {
+    this.car = this.vehicleService.getVehicle("GGA-888");
   }
 
 }
