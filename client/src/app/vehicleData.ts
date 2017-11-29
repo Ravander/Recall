@@ -3,7 +3,7 @@ import { Car } from "./car";
 export const CARS: Car[] = [
   { 
     license: "ABC-123", 
-    nickname: "Vichy", 
+    nickname: "Chevy", 
     model: "Chevrolet, Cruze LT",
     year: 2017, 
     lastAction: "21.8.2017", 

@@ -8,19 +8,25 @@ import { CARS } from "./vehicleData";
 @Injectable()
 export class VehicleService {
 
+  private cars: Car[] = CARS;
+
   constructor() { }
 
   addVehicle(car: Car): void {
-    let i = 0;
+    this.cars.push(car);
   }
 
   getVehicle(license: string): Car {
     let selectedCar: Car;
-    for (let i = 0; i < CARS.length; i++) {
-      if (CARS[i].license == license) {
-        selectedCar = CARS[i];
+    for (let i = 0; i < this.cars.length; i++) {
+      if (this.cars[i].license == license) {
+        selectedCar = this.cars[i];
       }
     }
     return selectedCar;
+  }
+
+  getVehicles(): Car[] {
+    return this.cars;
   }
 }

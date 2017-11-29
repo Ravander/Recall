@@ -11,11 +11,26 @@ import { VehicleService } from "../vehicle.service";
 export class DashboardComponent implements OnInit {
 
   car: Car;
+  cars: Car[];
 
   constructor(private vehicleService: VehicleService) { }
 
   ngOnInit() {
-    this.car = this.vehicleService.getVehicle("GGA-888");
+    this.car = this.getCar("ABC-123");
+    this.cars = this.getCars();
+  }
+
+  getCar(license: string): Car {
+    return this.vehicleService.getVehicle(license);
+  }
+
+  getCars(): Car[] {
+    return this.vehicleService.getVehicles();
+  }
+
+  onClick(license: string) {
+    console.log(license);
+    this.car = this.getCar(license); 
   }
 
 }
